@@ -1,0 +1,38 @@
+using System;
+
+namespace logicError2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter your age: ");
+
+            if (int.TryParse(Console.ReadLine(), out int age))
+            {
+                if (age > 18)
+                {
+                    Console.WriteLine("Over 18");
+                }
+                else if (age > 30)
+                {
+                    Console.WriteLine("Over 30");
+                }
+                else if (age > 50)
+                {
+                    Console.WriteLine("Over 50");
+                }
+                else
+                {
+                    Console.WriteLine("18 or younger");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter a valid number for your age.");
+            }
+
+            Console.ReadLine(); // Keep the console window open
+        }
+    }
+}
